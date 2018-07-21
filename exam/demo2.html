@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>复习试题（二）</title>
+  <style>
+    #p1 {
+      color: blue;
+      font-weight: bold;
+      font-size: 2em;
+      font-family: 黑体,华文行楷,微软雅黑;
+    }
+    h3 {
+      text-align: center;
+    }
+    .p2 {
+      text-decoration: underline;
+      font-size: 22px;
+      line-height: 30px;
+      text-indent: 20px;
+    }
+    .box {
+      width: 300px;
+      height: 300px;
+      padding: 10px;
+      border: 1px solid gray;
+      margin: 20px 10px;
+    }
+    .box1 {
+      background: lime;
+    }
+    #block1 {
+      float: left;
+      border: 2px red solid;
+      width: 150px;
+      height: 150px;
+    }
+    #block2 {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 200px;
+      left: 300px;
+      border: 2px red solid;
+    }
+    .simple {
+      width: 200px;
+      height: 200px;
+      border: 1px dotted red;
+      margin: 100px;
+    }
+    .simple1 {
+      background: lime;
+      /* 该属性对元素进行旋转、缩放、移动或倾斜  */
+      /* rotate 是进行2D旋转 */
+      transform: rotate(30deg);
+    }
+
+    .simple2 {
+      background: yellow;
+      /* skew是向x,y轴倾斜转换。skewX 是沿着x轴的2D倾斜转换。skewY  */
+      transform: skew(30deg);
+    }
+
+    .simple3 {
+      background: blue;
+    }
+
+    .simple3:hover {
+      background: lightblue;
+      /* scale(x,y) 缩放， scale3d（x,yz） 3d缩放 */
+      transform: scale(0.5, 0.5);
+    }
+
+    .simple4 {
+      background: gold;
+      /* translate(x,y) 定义2d， translate3d(x,y,z)定义3d */
+      transform: translate(50px, 100px);
+    }
+  </style>
+</head>
+<body>
+  <p id="p1">上海市浦东软件园职业技能培训中心</p>
+  <h3>测试</h3>
+  <p class="p2">上海浦东郭守敬路498号浦东软件园1号楼</p>
+  <div class="box box1">BOX1</div>
+  <div class="box box2">BOX2</div>
+
+  <div id="block1">block1</div>
+  <div id="block2">block2</div>
+
+  <div class="simple simple1">旋转盒子30度</div>
+  <div class="simple simple2">扭曲盒子30度</div>
+  <div class="simple simple3">鼠标经过时盒子缩小(比例为x:0.5,y:0.5)</div>
+  <div class="simple simple4">下移盒子(位移x方向50px,y方向100px)</div>
+</body>
+</html>

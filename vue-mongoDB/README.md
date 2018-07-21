@@ -62,3 +62,16 @@ db.test.updateOne({'name': 'Ray'}, {$set: {'age': 10}})
 第四个参数：默认是fasle， 只更新一条。如果设置为true，会全部更新
 db.test.update({'name': 'Ray'}, {$set: {'age': 10}}, false, true)
 db.test.updateMany({'name': 'Ray'}, {$set: {'age': 10}})
+save() 方法通过传入的文档来替换已有文档
+db.test.save({ "_id" : ObjectId("5b520089c4303dcba52f5ee2"), "name" : "Ray", "age" : 18 })
+
+创建和插入： db.demo.insert({username: "administrator", password: "test123", nickname: "管理员", description:  "我是管理员"})
+db.demo.insert({username: "guest", password: "test123", nickname: "普通访客", age: 19})
+
+查找某一条记录：db.demo.find().pretty()
+    db.demo.find({"username": "administrator"}).pretty()
+
+删除某一条记录：db.demo.remove({"username": "Ray"})
+db.demo.deleteOne({"username": "Ray"})
+删除所有数据： db.demo.remove({})
+db.demo.deleteMany({})
