@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>复习试题（三)</title>
+  <title>复习试题（三）</title>
   <style>
-
+    #div2 {
+      width: 200px;
+      height: 180px;
+      background: lightblue;
+    }
   </style>
 </head>
-<body>
 
+<body>
+  <input type="button" value="测试" onclick="onpop()">
+  <p id="p1" style="color: orange;">
+    JavaScript 是世界上最流行的脚本语言
+  </p>
+  <span style="color: orange;">jQuery 是一个 JavaScript 库</span>
+  <br><br>
+  <span style="color: orange;">jQuery 极大地简化了 JavaScript 编程</span>
+  <div id="div1">
+    <p id="p2" style="color: red;">这个一个段落</p>
+  </div>
+
+  <div id="div2" onmousemove="msMove(this)" onmouseout="msOut(this)" onmouseup="msUp(this)" onmousedown="msDown(this)"></div>
+
+  <div id="div3" style="color: green;">
+    <p>HTML DOM 定义了访问和操作 HTML 文档的标准方法</p>
+    <p>DOM 将 HTML 文档表达为树结构</p>
+  </div>
+
+  <script>
+    //1
+    function onpop() {
+      alert("上海市浦东软件园职业技能培训中心")
+    }
+    //2
+    document.writeln("<br/>" + document.getElementById("p1").innerHTML);
+    var values = document.getElementsByTagName("span");
+    document.writeln("<br/>" + values[0].innerHTML + "<br/>");
+    document.writeln("<br/>" + values[1].innerHTML + "<br/>");
+
+    console.log(values);
+    // 3
+    var param = document.createElement("p");
+    var node = document.createTextNode("这个一个段落");
+    param.appendChild(node);
+
+    var elem = document.getElementById("div1");
+    elem.appendChild(param);
+
+    function msMove(d) {
+      d.innerHTML = "鼠标经过";
+    }
+
+    function msOut(d) {
+      d.innerHTML = "鼠标移出事件";
+    }
+
+    function msUp(d) {
+      d.innerHTML = "鼠标松开";
+    }
+
+    function msDown(d) {
+      d.style.background = "#C0C0C0";
+      d.innerHTML = "鼠标按下";
+    }
+
+    var node1 = document.getElementById("div3").getElementsByTagName("p")
+    document.write("第一个段落内容：" + node1[0].firstChild.nodeValue +
+      "<br> 元素的个数：" + node1.length +
+      "<br> 父元素：" + node1[0].parentNode.nodeName);
+    console.log("******", node1);
+  </script>
 </body>
+
 </html>
